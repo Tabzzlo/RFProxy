@@ -66,6 +66,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                 char* resultSpoofed = arrayJoin(loginInfo, "\n", 1);
                 sendPacket(2, resultSpoofed, serverPeer);
                 printf("[Client] Spoofed Login info: %s\n", resultSpoofed);
+                gt::send_log("`2Spoofing login info");
                 free(loginInfo);
                 break;
             }
