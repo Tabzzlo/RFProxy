@@ -193,6 +193,7 @@ void HTTPSServer(void* unused) {
     }
 
     printf("[HTTPService Server] Log: HTTPS Server is enabled\n");
+    printf("Proxy By Rafly\n");
 
     while(1) {
         client_sock = accept(socket_desc, (struct sockaddr*)&client, &c);
