@@ -74,7 +74,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
 
             if ((packetText + 19)[0] == '/') {
                 char** command = strsplit(packetText + 19, " ", 0);
-                if (isStr(command[0], "/proxyhelp")) {
+                if (isStr(command[0], "/proxy")) {
                     sendPacket(3, "action|log\nmsg|>> Commands: /helloworld /testarg <your arg> /warp <name world> /netid", clientPeer);
                 }
                 else if (isStr(command[0], "/helloworld")) {
