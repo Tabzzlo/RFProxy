@@ -8,7 +8,7 @@
 #include "../proxyStruct.h"
 
 void serverConnect() {
-    printf("[Server] Proxy coected into Server\n");
+    printf("[Server] Proxy connected into Server\n");
 }
 
 void serverReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) {
