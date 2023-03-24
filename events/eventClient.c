@@ -78,7 +78,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                     sendPacket(3, "action|log\nmsg|>> Commands: /helloworld /warp <name world> /netid", clientPeer);
                 }
                 else if (isStr(command[0], "/cid")) {
-                    sendPacket(3, "action|growid", clientPeer);
+                    sendPacket(2, "action|growid", clientPeer);
                 }
                 else if (isStr(command[0], "/netid")) {
                     enet_peerSend(onPacketCreate("ss", "OnConsoleMessage", CatchMessage("My netID is %s", OnSpawn.LocalNetid)), clientPeer);
